@@ -5,7 +5,7 @@ admin.initializeApp(functions.config().firebase);
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
- exports.onReceiveLocation = functions.database.ref('{mbusid}/{location}').onWrite(event => {
+ exports.onReceiveLocation = functions.database.ref('locations/{mbusid}/{location}').onWrite(event => {
      const mbusid= event.params.mbusid;
      console.log("mbusid=" + mbusid);
 
